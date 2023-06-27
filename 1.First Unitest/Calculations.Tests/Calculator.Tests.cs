@@ -17,8 +17,8 @@ namespace Calculations.Tests
         {
 
             var calc = new Calculator();
-            var result = calc.AddDouble(1.2, 3.5);
-            Assert.Equal(4.7, result);
+            var result = calc.AddDouble(1.23, 3.55);
+            Assert.Equal(4.7, result,0);
         }
     }
 }
