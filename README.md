@@ -15,3 +15,9 @@
 - Is designed to be extensible
 - Easy to install via NuGet packages
 - Is the default unit testing tool in VS for .Net Core
+### Keywords
+- Fact: Test with no input
+### Phases of Unit Testing
+- Arrange: create an instance of test subject (load data, read config, gen test data)
+- Act: Run code
+- Assert: compare output with expected value
