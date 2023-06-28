@@ -4,19 +4,20 @@ namespace Calculations.Tests
 {
     public class CustomerTest
     {
-        [Fact]
-        public void CheckNameNotEmpty()
-        {
-            var customer = new Customer();
-            Assert.NotNull(customer.Name);
-            Assert.False(string.IsNullOrEmpty(customer.Name));
-        }
+        
 
         [Fact]
         public void CheckLegitForDiscount()
         {
             var customer = new Customer();
             Assert.InRange(customer.Age,25,40);
+        }
+        [Fact]
+        public void GetOrderByNameNotNull()
+        {
+            var customer = new Customer();
+            var exception  = Assert.Throws<ArgumentException>(()=>customer.GetOrdersByName(null));
+            Assert.Equal("name",exception.Message);
         }
     }
 }

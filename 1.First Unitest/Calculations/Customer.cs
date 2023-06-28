@@ -2,7 +2,15 @@
 {
     public class Customer
     {
-        public string Name => "Dat";
         public int Age => 25;
+
+        public int GetOrdersByName(string? name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException(nameof(name));
+            }
+            return 100;
+        }
     }
 }
