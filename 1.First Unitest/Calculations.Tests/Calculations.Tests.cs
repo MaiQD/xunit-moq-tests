@@ -10,6 +10,7 @@ namespace Calculations.Tests
     public class CalculationsTest
     {
         [Fact]
+        [Trait("Category","Fibo")]
         public void FiboDoesNotIncludeZero()
         {
             var calc = new Calculations();
@@ -17,6 +18,7 @@ namespace Calculations.Tests
         }
 
         [Fact]
+        [Trait("Category", "Fibo")]
         public void FiboInclude13()
         {
             var calc = new Calculations();
