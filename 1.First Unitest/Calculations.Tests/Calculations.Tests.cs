@@ -26,6 +26,7 @@ namespace Calculations.Tests
         }
 
         [Fact]
+        [Trait("Category", "Fibo")]
         public void FiboDoesNotInclude4()
         {
             var calc = new Calculations();
@@ -33,6 +34,7 @@ namespace Calculations.Tests
         }
 
         [Fact]
+        [Trait("Category", "Fibo")]
         public void Fibo_CheckCollection()
         {
             var expetedCollection = new List<int> {1, 1, 2, 3, 5, 8, 13, 21};
