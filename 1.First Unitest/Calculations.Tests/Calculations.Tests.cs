@@ -13,13 +13,13 @@ namespace Calculations.Tests
         }
     }
 
-    public class CalculationsTest : IClassFixture<CalculationFixture>
+    public class CalculationsTest : IClassFixture<CalculationFixture>, IDisposable
     {
         private readonly ITestOutputHelper _testOutputHelper;
         private readonly CalculationFixture _calculationFixture;
         private readonly MemoryStream _memoryStream;
 
-        public CalculationsTest(ITestOutputHelper testOutputHelper, CalculationFixture calculationFixture)
+        public CalculationsTest(ITestOutputHelper testOutputHelper, CalculationFixture calculationFixture) 
         {
             _testOutputHelper = testOutputHelper;
             _calculationFixture = calculationFixture;
@@ -60,9 +60,15 @@ namespace Calculations.Tests
         public void Fibo_CheckCollection()
         {
             _testOutputHelper.WriteLine("Fibo_CheckCollection");
-            var expetedCollection = new List<int> { 1, 1, 2, 3, 5, 8, 13, 21 };
+            var expectedCollection = new List<int> { 1, 1, 2, 3, 5, 8, 13, 21 };
             var calc = _calculationFixture.Calc;
-            Assert.Equal(expetedCollection, calc.FiboNumbers);
+            Assert.Equal(expectedCollection, calc.FiboNumbers);
+        }
+
+        public void Dispose()
+        {
+            _memoryStream.Dispose();
+            _calculationFixture.Dispose();
         }
     }
 }
