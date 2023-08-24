@@ -4,6 +4,11 @@
     {
         public int Age => 25;
 
+        public string GetFullName(string firstName, string lastName)
+        {
+            return $"{firstName} {lastName}";
+        }
+
         public virtual int GetOrdersByName(string? name)
         {
             if (string.IsNullOrEmpty(name))
