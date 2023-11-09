@@ -21,3 +21,11 @@
 - Arrange: create an instance of test subject (load data, read config, gen test data)
 - Act: Run code
 - Assert: compare output with expected value
+### Data Driven tests in XUnits
+|					| Sharedable	| Need Developers  |
+| -------			| ---			| --- |
+| Inline Attribute	| No			| Yes |
+| Property/Method	| Yes			| Yes |
+| Custom Attribute	| Yes			| Yes |
+| External Data		| Yes			| No  |
+
