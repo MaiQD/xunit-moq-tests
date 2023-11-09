@@ -2,6 +2,8 @@
 {
     public class CalculationsTests
     {
+        #region Inline Data
+
         [Fact]
         public void IsOdd_GivenOddValue_ReturnsTrue()
         {
@@ -36,5 +38,23 @@
             //Assert
             Assert.Equal(expected, res);
         }
+
+        #endregion Inline Data
+        #region Property/ Method
+        
+
+        [Theory]
+        [MemberData(nameof(TestDataShared.IsOddOrEvenData), MemberType = typeof(TestDataShared))]
+        public void IsOdd_TestOddAndEven_MemberData(int value, bool expected)
+        {
+            //Arrange
+            var calc = new Calculations();
+            //Act
+            var res = calc.IsOdd(value);
+            //Assert
+            Assert.Equal(expected, res);
+        }
+
+        #endregion Inline Data
     }
 }
