@@ -39,7 +39,6 @@ public class LoginsController : Controller
             {
                 //ToDo: redirect to home page
                 _httpContextAccessor.HttpContext.Session.SetString("User", model.Email);
-                return RedirectToAction("Display", "Photos");
             }
             else
             {

@@ -32,4 +32,12 @@
 ### Mocking
 - Add tests to a well designed application. YOu can make changes
 - Add tests to lagacy code
+	- What is Legacy Code? -> Legacy code has many dependencies, des not follow SOLID principles and is hard to test
+	- Why wring tests for legacy code? -> To make sure when we change or expand the code we do not introduce bugs
+	- Should tests be added to the entire project? -> No!
+	- Sprout Methods:
+		- Used when an existing (legacy) method needs to be expanded
+		- Collects the added code into (a) new method(s)
+		- Tests are written for the added methods(s)
+		- Test driven development can be applied
 - Test driven development (TDD)
