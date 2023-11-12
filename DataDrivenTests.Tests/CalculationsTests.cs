@@ -40,8 +40,8 @@
         }
 
         #endregion Inline Data
+
         #region Property/ Method
-        
 
         [Theory]
         [MemberData(nameof(TestDataShared.IsOddOrEvenData), MemberType = typeof(TestDataShared))]
@@ -55,6 +55,22 @@
             Assert.Equal(expected, res);
         }
 
-        #endregion Inline Data
+        #endregion Property/ Method
+
+        #region External Data
+
+        [Theory]
+        [MemberData(nameof(TestDataShared.IsOddOrEvenExternalData), MemberType = typeof(TestDataShared))]
+        public void IsOdd_TestOddAndEven_ExternalData(int value, bool expected)
+        {
+            //Arrange
+            var calc = new Calculations();
+            //Act
+            var res = calc.IsOdd(value);
+            //Assert
+            Assert.Equal(expected, res);
+        }
+
+        #endregion External Data
     }
 }
