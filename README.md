@@ -29,3 +29,7 @@
 | Custom Attribute	| Yes			| Yes |
 | External Data		| Yes			| No  |
 
+### Mocking
+- Add tests to a well designed application. YOu can make changes
+- Add tests to lagacy code
+- Test driven development (TDD)
