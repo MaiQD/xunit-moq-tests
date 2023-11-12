@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/3.MockTestProject/PersonalPhotos/Code/PersonalPhotos/wwwroot/PhotoStore/testxunitcoursecom
