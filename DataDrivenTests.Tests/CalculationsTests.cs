@@ -72,5 +72,33 @@
         }
 
         #endregion External Data
+
+        #region Data Attribute
+
+        [Theory]
+        [IsOddOrEvenDataAttribute]
+        public void IsOdd_TestOddAndEven_AttributeData_First(int value, bool expected)
+        {
+            //Arrange
+            var calc = new Calculations();
+            //Act
+            var res = calc.IsOdd(value);
+            //Assert
+            Assert.Equal(expected, res);
+        }
+
+        [Theory]
+        [IsOddOrEvenDataAttribute]
+        public void IsOdd_TestOddAndEven_AttributeData_Second(int value, bool expected)
+        {
+            //Arrange
+            var calc = new Calculations();
+            //Act
+            var res = calc.IsOdd(value);
+            //Assert
+            Assert.Equal(expected, res);
+        }
+
+        #endregion Data Attribute
     }
 }
